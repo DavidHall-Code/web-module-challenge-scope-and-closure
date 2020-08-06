@@ -80,11 +80,24 @@ finalScore(inning, 9) might return:
 
 */ 
 
-function finalScore(/*code Here*/){
+function finalScore(inning, inningFinal){
 
-  /*Code Here*/
-
-}
+  let finalScore = {};
+  
+  finalScore.Home = 0;
+  finalScore.Away = 0;
+  
+  for(let i = 1; i<inningFinal; i++){
+  
+  finalScore.Home = finalScore.Home + inning();
+  finalScore.Away = finalScore.Away + inning();
+  }
+  
+  return finalScore;
+  
+  }
+  
+  console.log(finalScore(inning, 9));
 
 /* Task 4: 
 
